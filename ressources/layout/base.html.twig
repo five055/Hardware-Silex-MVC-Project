@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="{% block seodescription '' %}">
+        <meta name="robots" content="all">
+        <title>{% block title '' %}</title>
+
+        {% block stylesheets %}
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+        <!-- Customizable CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/colors/green.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.transitions.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+
+        <!-- Fonts -->
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Icons/Glyphs -->
+        <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/iconeSite.png') }}">
+
+        <!-- Alternate colors -->
+        <link href="{{ asset('assets/css/colors/green.css') }}" type="text/css" rel="alternate stylesheet" title="green-color" />
+        <link href="{{ asset('assets/css/colors/blue.css') }}" type="text/css" rel="alternate stylesheet" title="blue-color" />
+        <link href="{{ asset('assets/css/colors/red.css') }}" type="text/css" rel="alternate stylesheet" title="red-color" />
+        <link href="{{ asset('assets/css/colors/orange.css') }}" type="text/css" rel="alternate stylesheet" title="orange-color" />
+        <link href="{{ asset('assets/css/colors/navy.css') }}" type="text/css" rel="alternate stylesheet" title="navy-color" />
+        <link href="{{ asset('assets/css/colors/dark-green.css') }}" type="text/css" rel="alternate stylesheet" title="dark-green-color" />
+
+        {% endblock %}
+
+        <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+        <!--[if lt IE 9]>
+            <script src="{{ asset('assets/js/html5shiv.js') }}"></script>
+            <script src="{{ asset('assets/js/respond.min.js') }}"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- ============================================================= TOP NAVIGATION ============================================================= -->
+            <nav class="top-bar animate-dropdown">
+                <div class="container">
+                    <div class="col-xs-12 col-sm-6 no-margin">
+                        <ul>
+                            <li><a href="{{ url('index_index') }}">Accueil</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown" href="#change-colors">Essayez-moi</a>
+
+                                <ul class="dropdown-menu" role="menu" >
+                                    <li role="presentation"><a role="menuitem" class="changecolor green-text" tabindex="-1" href="#" title="green-color">Green</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor blue-text" tabindex="-1" href="#" title="blue-color">Blue</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor red-text" tabindex="-1" href="#" title="red-color">Red</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor orange-text" tabindex="-1" href="#" title="orange-color">Orange</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor navy-text" tabindex="-1" href="#" title="navy-color">Navy</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor dark-green-text" tabindex="-1" href="#" title="dark-green-color">Dark Green</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ url('index_categories') }}">Les Catégories</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-6 no-margin">
+                        <ul class="right">
+                            <li><a href="authentication.html">Inscription</a></li>
+                            <li><a href="authentication.html">Connexion</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+                </div><!-- /.container -->
+            </nav><!-- /.top-bar -->
+            <!-- ============================================================= TOP NAVIGATION : END ============================================================= -->
+
+            <!-- ============================================================= HEADER ============================================================= -->
+            <header>
+                <div class="container no-padding">
+                    <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                        <!-- ============================================================= LOGO ============================================================= -->
+                        <div>
+                            <a href="index.html">
+                                <img src="assets/images/HardWhere_logo.png" alt="Logo" width ="70%">
+                            </a>
+                        </div><!-- /.logo -->
+                        <!-- ============================================================= LOGO : END ============================================================= -->
+                    </div><!-- /.logo-holder -->
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
+                        <!-- ============================================================= SEARCH AREA ============================================================= -->
+                        <div class="search-area">
+                            <form>
+                                <div class="control-group">
+                                    <input class="search-field" placeholder="Recherche..." />
+
+                                    <ul class="categories-filter animate-dropdown">
+                                        <li class="dropdown">
+
+                                            <a class="dropdown-toggle"  data-toggle="dropdown" href="category-grid.html">Catégorie</a>
+
+                                            <ul class="dropdown-menu" role="menu" >
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Boites &amp; Accessoires</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Processeurs</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Ventilateurs</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes Graphiques</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Memoire (RAM)</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes mères</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Packs carte mère + CPU</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Alimentations</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes Son</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Autres</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <a class="search-button" href="#" ></a>
+
+                                </div>
+                            </form>
+                        </div><!-- /.search-area -->
+                        <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                    </div><!-- /.top-search-holder -->
+
+
+
+                    </div><!-- /.top-cart-row -->
+                </div><!-- /.container -->
+            </header>
+            <!-- ============================================================= HEADER : END ============================================================= -->
+
+             {% block contenu %}{% endblock %}
+
+            <!-- ============================================================= FOOTER ============================================================= -->
+            <footer id="footer" class="color-bg">
+                <div class="link-list-row">
+                    <div class="container no-padding">
+                        <div class="col-xs-12 col-md-4 ">
+                            <!-- ============================================================= CONTACT INFO ============================================================= -->
+                            <div class="contact-info">
+                                <div class="footer-logo">
+                                    <img src="{{ asset('assets/images/HardWhere_logo.png') }}" alt="Logo">
+                                </div><!-- /.footer-logo -->
+
+                                <div class="social-icons">
+                                    <h3>Gardez le contact</h3>
+                                    <ul>
+                                        <li><a href="http://facebook.com/transvelo" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-pinterest"></a></li>
+                                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                                        <li><a href="#" class="fa fa-stumbleupon"></a></li>
+                                        <li><a href="#" class="fa fa-dribbble"></a></li>
+                                        <li><a href="#" class="fa fa-vk"></a></li>
+                                    </ul>
+                                </div><!-- /.social-icons -->
+
+                            </div>
+                            <!-- ============================================================= CONTACT INFO : END ============================================================= -->
+                        </div>
+
+                        <div class="col-xs-12 col-md-8 no-margin">
+                            <!-- ============================================================= LINKS FOOTER ============================================================= -->
+                            <div class="link-widget">
+                                <div class="widget">
+                                    <h3>Navigation rapide</h3>
+                                    <ul>
+                                      <li><a href="#">Boites &amp; Accessoires</a></li>
+                                      <li><a href="#">Processeurs</a></li>
+                                      <li><a href="#">Ventilateurs</a></li>
+                                      <li><a href="#">Cartes Graphiques</a></li>
+                                      <li><a href="#">Memoire (RAM)</a></li>
+                                      <li><a href="#">Cartes mères</a></li>
+                                      <li><a href="#">Packs carte mère + CPU</a></li>
+                                      <li><a href="#">Alimentations</a></li>
+                                      <li><a href="#">Cartes Son</a></li>
+                                      <li><a href="#">Autres</a></li>
+                                    </ul>
+                                </div><!-- /.widget -->
+                            </div><!-- /.link-widget -->
+
+                            <div class="link-widget">
+                                <div class="widget">
+                                    <h3>Information</h3>
+                                    <ul>
+                                        <li><a href="category-grid.html">A propos</a></li>
+                                        <li><a href="category-grid.html">Nous contacter</a></li>
+
+                                    </ul>
+                                </div><!-- /.widget -->
+                            </div><!-- /.link-widget -->
+                            <!-- ============================================================= LINKS FOOTER : END ============================================================= -->
+                        </div>
+                    </div><!-- /.container -->
+                </div><!-- /.link-list-row -->
+
+                <div class="copyright-bar">
+                    <div class="container">
+                        <div class="col-xs-12 col-sm-6 no-margin">
+                            <div class="copyright">
+                                &copy; <a href="index.html">HardWhere</a> - all rights reserved
+                            </div><!-- /.copyright -->
+                        </div>
+                    </div><!-- /.container -->
+                </div><!-- /.copyright-bar -->
+            </footer><!-- /#footer -->
+            <!-- ============================================================= FOOTER : END ============================================================= -->
+        </div><!-- /.wrapper -->
+
+        {% block javascripts %}
+
+          <!-- JavaScripts placed at the end of the document so the pages load faster -->
+          <script
+  			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			  crossorigin="anonymous"></script>
+          <script
+  			  src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
+  			  integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
+  			  crossorigin="anonymous"></script>
+          <script src="{{ asset('assets/switchstylesheet/switchstylesheet.js') }}"></script>
+          <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+          <script src="{{ asset('assets/js/gmap3.min.js') }}"></script>
+          <script src="{{ asset('assets/js/bootstrap-hover-dropdown.min.js') }}"></script>
+          <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+          <script src="{{ asset('assets/js/css_browser_selector.min.js') }}"></script>
+          <script src="{{ asset('assets/js/echo.min.js') }}"></script>
+          <script src="{{ asset('assets/js/jquery.easing-1.3.min.js') }}"></script>
+          <script src="{{ asset('assets/js/bootstrap-slider.min.js') }}"></script>
+          <script src="{{ asset('assets/js/jquery.raty.min.js') }}"></script>
+          <script src="{{ asset('assets/js/jquery.prettyPhoto.min.js') }}"></script>
+          <script src="{{ asset('assets/js/jquery.customSelect.min.js') }}"></script>
+          <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+          <script src="{{ asset('assets/js/buttons.js') }}"></script>
+          <script src="{{ asset('assets/js/scripts.js') }}"></script>
+
+        {% endblock %}
+    </body>
+</html>
