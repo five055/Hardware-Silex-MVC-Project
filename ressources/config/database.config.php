@@ -6,7 +6,7 @@ use Idiorm\Silex\Provider\IdiormServiceProvider;
 define('DBHOST',     'localhost');
 define('DBNAME',     'hardware');
 define('DBUSERNAME', 'root');
-define('DBPASSWORD', '');
+define('DBPASSWORD', 'mysql');
 
 #2 : Doctrine DBAL
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(

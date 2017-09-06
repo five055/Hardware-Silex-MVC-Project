@@ -41,6 +41,19 @@ class IndexControllerProvider implements ControllerProviderInterface {
                 ->post('/constructeur', 'App\Controller\IndexController::constructeurAjax')
                 ->bind('constructeur_ajax');
 
+# controllers pour la connexion
+            $controllers
+                ->match('/connexion', 'App\Controller\IndexController::connexionAction')
+                ->method('GET|POST')
+                ->bind('index_connexion');
+
+# controllers pour l'inscription
+            $controllers
+                ->match('/inscription', 'App\Controller\IndexController::inscriptionAction')
+                ->method('GET|POST')
+                ->bind('index_inscription');
+
+
         # On retourne la liste des controllers (ControllerCollection)
         return $controllers;
 

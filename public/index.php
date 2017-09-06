@@ -19,19 +19,3 @@ require PATH_SRC . '/app.php';
 
 #5 : Execution de l'Application
 $app->run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

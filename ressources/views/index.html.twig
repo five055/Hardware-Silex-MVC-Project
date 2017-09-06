@@ -158,7 +158,7 @@
                                 <h1>Pub ou promo</h1>
                                 <span class="tagline">à garder ou non</span>
                             </div>
-                            <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-narrow-01.jpg" />
+                            <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/banners/banner-narrow-01.jpg') }}" />
                         </a>
                     </div>
                     <div class="col-xs-12 col-lg-6 no-margin text-right banner">
@@ -167,7 +167,7 @@
                                 <h1>Pub ou Promo</h1>
                                 <span class="tagline">à garder ou non</span>
                             </div>
-                            <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-narrow-02.jpg" />
+                            <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/banners/banner-narrow-02.jpg') }}" />
                         </a>
                     </div>
                 </div><!-- /.container -->
@@ -180,8 +180,6 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" >
                             <li class="active"><a href="#featured" data-toggle="tab">En ce moment</a></li>
-                            <li><a href="#new-arrivals" data-toggle="tab">Nouveautés</a></li>
-                            <li><a href="#top-sales" data-toggle="tab">Les plus consultés</a></li>
                         </ul>
 
                         <!-- Tab panes -->
@@ -192,10 +190,10 @@
                                         <div class="product-item">
                                             <div class="ribbon red"><span>a saisir</span></div>
                                             <div class="image">
-                                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-01.jpg" />
+                                                <img alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/products/product-01.jpg') }}" />
                                             </div>
                                             <div class="body">
-                                                <div class="label-discount green">-50% promo</div>
+                                                <div class="label-discount green">pour les codes promo (-50%)</div>
                                                 <div class="title">
                                                     <a href="single-product.html">Produit 1</a>
                                                 </div>
@@ -216,7 +214,7 @@
                                         <div class="product-item">
                                             <div class="ribbon blue"><span>Nouveau !</span></div>
                                             <div class="image">
-                                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-02.jpg" />
+                                                <img alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/products/product-02.jpg') }}" />
                                             </div>
                                             <div class="body">
                                                 <div class="label-discount clear"></div>
@@ -239,7 +237,7 @@
                                         <div class="product-item">
 
                                             <div class="image">
-                                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-03.jpg" />
+                                                <img alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/products/product-03.jpg') }}" />
                                             </div>
                                             <div class="body">
                                                 <div class="label-discount clear"></div>
@@ -263,7 +261,7 @@
                                             <div class="ribbon red"><span>A saisir</span></div>
                                             <div class="ribbon green"><span>Le plus consulté</span></div>
                                             <div class="image">
-                                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-04.jpg" />
+                                                <img alt="" src="assets/images/blank.gif" data-echo="{{ asset ('assets/images/products/product-04.jpg') }}" />
                                             </div>
                                             <div class="body">
                                                 <div class="label-discount clear"></div>
@@ -283,11 +281,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="loadmore-holder text-center">
-                                    <a class="btn-loadmore" href="#">
-                                        <i class="fa fa-plus"></i>
-                                        Voir plus de produits</a>
-                                </div>
 
                             </div>
                             <div class="tab-pane" id="new-arrivals">
@@ -296,7 +289,7 @@
                                       <div class="product-item">
                                           <div class="ribbon red"><span>a saisir</span></div>
                                           <div class="image">
-                                              <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-01.jpg" />
+                                              <img alt="" src="{{ asset('assets/images/blank.gif') }}" data-echo="{{ asset ('assets/images/products/product-01.jpg') }}" />
                                           </div>
                                           <div class="body">
                                               <div class="label-discount green">-50% promo</div>
@@ -320,7 +313,7 @@
                                       <div class="product-item">
                                           <div class="ribbon blue"><span>Nouveau !</span></div>
                                           <div class="image">
-                                              <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-02.jpg" />
+                                              <img alt="" src="{{ asset('assets/images/blank.gif') }}" data-echo="{{asset ('assets/images/products/product-02.jpg') }}" />
                                           </div>
                                           <div class="body">
                                               <div class="label-discount clear"></div>
