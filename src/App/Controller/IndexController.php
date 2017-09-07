@@ -77,7 +77,7 @@ class IndexController
         $prix1 = floatval(str_replace(' ', '', $exPrix[0]));
         $prix2 = floatval(str_replace(' ', '', $exPrix[1]));
 
-        $sql = 'SELECT `ean`, `urlImage`, `productGroup`, `productTypeName`, `titre`, `garranty`, `prix`, `slug` FROM articles WHERE prix BETWEEN  '.$prix1.' AND '.$prix2.' ORDER BY PRIX ASC' ;
+        $sql = 'SELECT `ean`, `urlImage`, `productGroup`, `productTypeName`, `titre`, `garranty`, `prix`, `slug` FROM articles WHERE prix BETWEEN  '.$prix1.' AND '.$prix2.' ORDER BY prix ASC' ;
 
         #print_r($sql);
 
