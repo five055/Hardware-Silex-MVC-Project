@@ -20,6 +20,17 @@ class IndexController
             'message'  => $message
         ]);
     }
+    public function mentionsAction(Application $app) {
+
+        # Affichage dans la Vue
+        return $app['twig']->render('terms.html.twig');
+    }
+
+    public function connexionAction(Application $app) {
+
+        # Affichage dans la Vue
+        return $app['twig']->render('authentication.html.twig');
+    }
 
     public function contactAction(Application $app, Request $request) {
 
