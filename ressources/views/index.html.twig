@@ -26,11 +26,11 @@
                             <nav class="yamm megamenu-horizontal" role="navigation">
                                 <ul class="nav">
                                     <li class="dropdown menu-item">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Toutes les catégories</a>
+                                        <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Toutes les catégories</a> -->
                                         <ul class="dropdown-menu mega-menu">
                                             <li class="yamm-content">
                                                 <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                                                <div class="row">
+                                                <!-- <div class="row">
                                                     <div class="col-xs-12 col-lg-4">
                                                         <ul>
                                                             <li><a href="#">Boites &amp; Accessoires</a></li>
@@ -50,51 +50,64 @@
                                                             <li><a href="#">Autres</a></li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <!-- ================================== MEGAMENU VERTICAL ================================== -->
                                             </li>
                                         </ul>
                                     </li><!-- /.menu-item -->
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Boites &amp; Accessoires</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "component"
+                                              }) }}">Boites &amp; Accessoires</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Processeurs</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "computer_processor"
+                                              }) }}">Processeurs</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Ventilateurs</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "computer_cooling_device"
+                                              }) }}">Ventilateurs</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Cartes Graphiques</a>
+
+
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "video_card"
+                                              }) }}">Cartes Graphiques</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Memoire (RAM)</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "ram_memory"
+                                              }) }}">Memoire (RAM)</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Cartes mères</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "motherboard"
+                                              }) }}">Cartes mères</a>
+                                    </li>
+
+
+                                    <li class="dropdown menu-item">
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "system_power_device"
+                                              }) }}">Alimentations</a>
                                     </li>
 
                                     <li class="dropdown menu-item">
-                                        <a href="#">Packs carte mère + CPU</a>
+                                        <a href="{{ url('index_categorie' , {
+                                              productTypeName : "sound_card"
+                                              }) }}">Cartes Son</a>
                                     </li>
 
-                                    <li class="dropdown menu-item">
-                                        <a href="#">Alimentations</a>
-                                    </li>
 
-                                    <li class="dropdown menu-item">
-                                        <a href="#">Cartes Son</a>
-                                    </li>
-
-                                    <li class="dropdown menu-item">
-                                        <a href="#">Autres</a>
-                                    </li>
                                 </ul><!-- /.nav -->
                             </nav><!-- /.megamenu-horizontal -->
                         </div><!-- /.side-menu -->

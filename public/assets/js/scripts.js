@@ -248,34 +248,34 @@
     /*  STAR RATING
     /*===================================================================================*/
 
-    $(document).ready(function () {
-
-        if ($('.star').length > 0) {
-            $('.star').each(function(){
-                    var $star = $(this);
-
-                    if($star.hasClass('big')){
-                        $star.raty({
-                            starOff: 'assets/images/star-big-off.png',
-                            starOn: 'assets/images/star-big-on.png',
-                            space: false,
-                            score: function() {
-                                return $(this).attr('data-score');
-                            }
-                        });
-                    }else{
-                     $star.raty({
-                        starOff: 'assets/images/star-off.png',
-                        starOn: 'assets/images/star-on.png',
-                        space: false,
-                        score: function() {
-                            return $(this).attr('data-score');
-                        }
-                    });
-                }
-            });
-        }
-    });
+    // $(document).ready(function () {
+    //
+    //     if ($('.star').length > 0) {
+    //         $('.star').each(function(){
+    //                 var $star = $(this);
+    //
+    //                 if($star.hasClass('big')){
+    //                     $star.raty({
+    //                         starOff: 'assets/images/star-big-off.png',
+    //                         starOn: 'assets/images/star-big-on.png',
+    //                         space: false,
+    //                         score: function() {
+    //                             return $(this).attr('data-score');
+    //                         }
+    //                     });
+    //                 }else{
+    //                  $star.raty({
+    //                     starOff: 'assets/images/star-off.png',
+    //                     starOn: 'assets/images/star-on.png',
+    //                     space: false,
+    //                     score: function() {
+    //                         return $(this).attr('data-score');
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     }
+    // });
 
     /*===================================================================================*/
     /*  SHARE THIS BUTTONS
@@ -329,10 +329,10 @@
         // Price Slider
         if ($('.price-slider').length > 0) {
             $('.price-slider').slider({
-                min: 100,
-                max: 700,
+                min: 0,
+                max: 1000,
                 step: 10,
-                value: [100, 400],
+                value: [40, 200],
                 handle: "square"
 
             });
