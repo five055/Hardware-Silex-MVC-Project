@@ -21,6 +21,24 @@ class IndexController
         ]);
     }
 
+    public function contactAction(Application $app, Request $request) {
+
+      if($request->isMethod('POST')) :
+
+        $message = (new \Swift_Message($request->get('objet').' ('.$request->get('email').')'))
+        ->setFrom(array($request->get('email')))
+        ->setTo(array('LemonXZest@gmail.com'))
+        ->setBody('Message de '.$request->get('prenom').' '.$request->get('nom').' :<br>'.$request->get('message'), 'text/html');
+
+        $app['mailer']->send($message);
+
+        return new Response('Votre message a bien été envoyé', 201);
+
+      endif;
+
+      return $app['twig']->render('contact.html.twig');
+    }
+
     public function categoriesAction(Application $app) {
 
         # Déclaration de categorie

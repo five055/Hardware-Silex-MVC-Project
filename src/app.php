@@ -51,6 +51,17 @@ require PATH_RESSOURCES . '/config/database.config.php';
 #10 : Sécurisation de notre Application
 require PATH_RESSOURCES . '/config/security.php';
 
+$app->register(new Silex\Provider\SwiftmailerServiceProvider());
+
+$app['swiftmailer.options'] = array(
+    'host' => 'smtp.gmail.com',
+    'port' => 587,
+    'username' => 'LemonXZest@gmail.com',
+    'password' => 'BerSerK23514!',
+    'encryption' => 'tls',
+    'auth_mode' => 'login'
+);
+
 #11 : Gestion des Erreurs
 #   : https://gist.github.com/tournasdim/171b443065936bbb5ef3
 $app->error(function (\Exception $e) use ($app) {
