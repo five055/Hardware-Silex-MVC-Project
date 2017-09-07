@@ -86,12 +86,12 @@
                             <div class="brand">{{ produit.constructeur}}</div>
 
                             <div class="excerpt">
-                                <p>Résumé de la description</p>
+                                <p><strong>Résumé de la description</strong></p>
                                   <p>{{ produit.caracteristique}}</p>
                             </div>
 
                             <div class="prices">
-                                <div class="price-current">{{ produit.prix}}</div>
+                                <div class="price-current"> {{ produit.prix}}</div>
                             </div>
                         </div><!-- /.body -->
 
@@ -113,23 +113,26 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="description">
 
-                                <p>{{ produit.caracteristique}}</p>
+                                <p><strong>Titre :</strong>{{ produit.titre}}</p>
+                                <p><strong>Description :</strong>{{ produit.caracteristique}}</p>
+                                <p><strong>Prix :</strong> {{ produit.prix}}</p>
+                                <p><strong>Garranty :</strong> {{ produit.garranty}}</p>
 
                                 <div class="meta-row">
                                     <div class="inline">
                                         <label>categories:</label>
-                                        <span><a href="{{ url('index_categories') }}">{{ produit.productTypeName}}</a>,</span>
+                                        <span><a href="{{ url('index_categories') }}">{{ produit.productTypeName}}</a></span>
                                         <!-- <span><a href="#">Catégorie</a></span> -->
                                     </div><!-- /.inline -->
 
-                                    <span class="seperator">/</span>
+                                    <span class="seperator"></span>
 
                                     <!-- <div class="inline">
                                         <label>tag:</label>
                                         <span><a href="#">Tag</a>,</span>
                                         <span><a href="#">Tag</a>,</span>
                                         <span><a href="#">Tag</a></span>
-                                    </div><!-- /.inline --> -->
+                                    </div><!-- /.inline -->
                                 </div><!-- /.meta-row -->
                             </div><!-- /.tab-pane #description -->
 
