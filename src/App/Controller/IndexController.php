@@ -24,11 +24,11 @@ class IndexController
     public function categoriesAction(Application $app) {
 
         # Déclaration de categorie
-        $produits   = $app['db']->fetchAll('SELECT * FROM articles ORDER BY productTypeName DESC LIMIT 6');
+        $produits   = $app['db']->fetchAll('SELECT * FROM articles ORDER BY productTypeName DESC LIMIT 18');
         $categories = $app['db']->fetchAll('SELECT DISTINCT productTypeName FROM articles');
         $construs   = $app['db']->fetchAll("SELECT DISTINCT constructeur FROM articles");
         $modes      = $app['db']->fetchAll("SELECT DISTINCT model FROM articles");
-
+        // print_r($produits);
         # Affichage dans la Vue
         return $app['twig']->render('categories.html.twig',[
             'categories'  => $categories,
@@ -67,5 +67,19 @@ class IndexController
 
       endif;
     }
+
+
+
+    public function articleAction($productTypeName, $slugarticle, $ean, Application $app, Request $request) {
+      
+          $sql = 'SELECT * FROM articles WHERE ean = "'.$ean.'"';
+          $produit   = $app['db']->fetchAll($sql);
+
+          return $app['twig']->render('article.html.twig',[
+              'produit' => $produit[0]
+              // 'suggestions' => $suggestions
+          ]);
+
+      }
 
 }
