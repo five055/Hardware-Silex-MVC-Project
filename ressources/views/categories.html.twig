@@ -105,23 +105,7 @@
                             <div class="grid-list-products">
                                 <h2 class="section-title">Produits</h2>
 
-                                <div class="control-bar">
-                                    <div id="item-count" class="le-select">
-                                        <select>
-                                            <option value="1">24 par page</option>
-																						<option value="3">32 par page</option>
-                                            <option value="2">48 par page</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="grid-list-buttons">
-                                        <ul>
-                                            <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Mozaïque</a></li>
-                                            <li class="grid-list-button-item "><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> Liste</a></li>
-                                        </ul>
-                                    </div>
-                                </div><!-- /.control-bar -->
-
+                              
                                 <div class="tab-content">
                                     <div id="grid-view" class="products-grid fade tab-pane in active">
 
@@ -145,7 +129,10 @@
                                                         </div>
                                                         <div class="hover-area">
                                                             <div class="add-cart-button">
-                                                                <a href="#" class="le-button">Voir</a>
+                                                                <a href="{{ url('index_article' , {
+                                                                    productTypeName : produit.productTypeName | lower,
+                                                                    slugarticle : produit.slug ,
+                                                                    ean : produit.ean }) }}" class="le-button">Voir</a>
                                                             </div>
                                                         </div>
                                                     </div><!-- /.product-item -->
@@ -185,6 +172,9 @@
             </section><!-- /#category-grid -->
 
 
+            <input id="routeURL" type="hidden" value="{{ url('index_index') }}">
+
+
 {% endblock %}
 
 {% block javascripts %}
@@ -209,6 +199,7 @@
                       //  console.log(data);
                         console.log(data)
                         let produits = $('<div class="resultat">');
+                        let routeURL = $('#routeURL').val();
 
                         for(i=0 ; i < data.length ; i++) {
 
@@ -233,7 +224,9 @@
                                       </div>
                                       <div class="hover-area">
                                           <div class="add-cart-button">
-                                              <a href="#" class="le-button">Voir</a>
+
+                                              <a href="${routeURL}${data[i].productTypeName.toLowerCase()}/${data[i].slug}_${data[i].ean}.html" class="le-button">Voir</a>
+
                                           </div>
                                       </div>
                                   </div>
@@ -281,7 +274,7 @@
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="#" class="le-button">Voir</a>
+
                                         </div>
                                     </div>
                                 </div>

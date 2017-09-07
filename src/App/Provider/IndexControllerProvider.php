@@ -41,6 +41,14 @@ class IndexControllerProvider implements ControllerProviderInterface {
                 ->post('/constructeur', 'App\Controller\IndexController::constructeurAjax')
                 ->bind('constructeur_ajax');
 
+
+                # Page Article
+            $controllers
+                ->get('/{productTypeName}/{slugarticle}_{ean}.html','App\Controller\IndexController::articleAction')
+                ->assert('ean', '\d+')
+                ->bind('index_article');
+
+
         # On retourne la liste des controllers (ControllerCollection)
         return $controllers;
 
