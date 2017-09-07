@@ -1,0 +1,62 @@
+{% extends 'layout.html.twig' %}
+
+{# Block de title défini dans base.html.twig #}
+{% block title %} Contact - HardWhere {% endblock %}
+
+{# Block de Contenu défini dans base.html.twig #}
+{% block contenu %}
+
+                        </div><!-- /.search-area -->
+                        <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                    </div><!-- /.top-search-holder -->
+                </div><!-- /.container -->
+            </header>
+            <!-- ============================================================= HEADER : END ============================================================= -->
+
+
+            <!-- ========================================= MAIN ========================================= -->
+            <main id="contact-us" class="inner-bottom-md">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <section class="section leave-a-message">
+                                <h2 class="bordered">Contactez-nous</h2>
+                                <form id="contact-form" class="contact-form cf-style-1 inner-top-xs" action="{{ path('index_contact') }}">
+                                    <div class="row field-row">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <label>Nom</label>
+                                            <input type="text" class="le-input" name="nom" required>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6">
+                                            <label>Prénom</label>
+                                            <input type="text" class="le-input" name="prenom" required>
+                                        </div>
+                                      </div><!-- /.field-row -->
+
+                                        <div class="field-row">
+                                            <label>Email</label>
+                                            <input type="email" class="le-input" name="email" required>
+                                        </div>
+
+                                    <div class="field-row">
+                                        <label>Sujet</label>
+                                        <input type="text" name="objet" class="le-input" required>
+                                    </div><!-- /.field-row -->
+
+                                    <div class="field-row">
+                                        <label>Votre message</label>
+                                        <textarea rows="8" type="text" class="le-input" name="message" required></textarea>
+                                    </div><!-- /.field-row -->
+
+                                    <div class="buttons-holder">
+                                        <button id="btnContactSub" type="submit" name="btnSub" class="le-button huge">Envoyer</button>
+                                    </div><!-- /.buttons-holder -->
+                                </form><!-- /.contact-form -->
+                            </section><!-- /.leave-a-message -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </main>
+            <!-- ========================================= MAIN : END ========================================= -->
+
+						{% endblock %}

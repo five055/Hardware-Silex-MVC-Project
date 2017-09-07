@@ -541,6 +541,9 @@
     	$(".changecolor").switchstylesheet( { seperator:"color"} );
     });
 
+    $("#btnContactSub").click(function(){
+      alert('votre message a bien été envoyé');
+    });
 
         /*===================================================================================*/
         /*  Yamm Dropdown
