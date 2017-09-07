@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="robots" content="all">
+
+        <title>HardWhere - Comparateur de prix pour pièces informatiques</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <!-- Customizable CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/colors/green.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.transitions.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+
+        <!-- Fonts -->
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Icons/Glyphs -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/iconeSite.png">
+
+        <!-- Alternate colors -->
+        <link href="assets/css/colors/green.css" type="text/css" rel="alternate stylesheet" title="green-color" />
+        <link href="assets/css/colors/blue.css" type="text/css" rel="alternate stylesheet" title="blue-color" />
+        <link href="assets/css/colors/red.css" type="text/css" rel="alternate stylesheet" title="red-color" />
+        <link href="assets/css/colors/orange.css" type="text/css" rel="alternate stylesheet" title="orange-color" />
+        <link href="assets/css/colors/navy.css" type="text/css" rel="alternate stylesheet" title="navy-color" />
+        <link href="assets/css/colors/dark-green.css" type="text/css" rel="alternate stylesheet" title="dark-green-color" />
+
+        <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- ============================================================= TOP NAVIGATION ============================================================= -->
+            <nav class="top-bar animate-dropdown">
+                <div class="container">
+                    <div class="col-xs-12 col-sm-6 no-margin">
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown" href="#change-colors">Essayez-moi</a>
+
+                                <ul class="dropdown-menu" role="menu" >
+                                    <li role="presentation"><a role="menuitem" class="changecolor green-text" tabindex="-1" href="#" title="green-color">Green</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor blue-text" tabindex="-1" href="#" title="blue-color">Blue</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor red-text" tabindex="-1" href="#" title="red-color">Red</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor orange-text" tabindex="-1" href="#" title="orange-color">Orange</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor navy-text" tabindex="-1" href="#" title="navy-color">Navy</a></li>
+                                    <li role="presentation"><a role="menuitem" class="changecolor dark-green-text" tabindex="-1" href="#" title="dark-green-color">Dark Green</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-12 col-sm-6 no-margin">
+                        <ul class="right">
+                            <li><a href="authentication.html">Inscription</a></li>
+                            <li><a href="authentication.html">Connexion</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+                </div><!-- /.container -->
+            </nav><!-- /.top-bar -->
+            <!-- ============================================================= TOP NAVIGATION : END ============================================================= -->
+
+            <!-- ============================================================= HEADER ============================================================= -->
+            <header>
+                <div class="container no-padding">
+                    <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                        <!-- ============================================================= LOGO ============================================================= -->
+                        <div>
+                            <a href="index.html">
+                                <img src="assets/images/HardWhere_logo.png" alt="Logo" width ="70%">
+                            </a>
+                        </div><!-- /.logo -->
+                        <!-- ============================================================= LOGO : END ============================================================= -->
+                    </div><!-- /.logo-holder -->
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
+                        <!-- ============================================================= SEARCH AREA ============================================================= -->
+                        <div class="search-area">
+                            <form>
+                                <div class="control-group">
+                                    <input class="search-field" placeholder="Recherche..." />
+
+                                    <ul class="categories-filter animate-dropdown">
+                                        <li class="dropdown">
+
+                                            <a class="dropdown-toggle"  data-toggle="dropdown" href="category-grid.html">Catégorie</a>
+
+                                            <ul class="dropdown-menu" role="menu" >
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Boites &amp; Accessoires</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Processeurs</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Ventilateurs</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes Graphiques</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Memoire (RAM)</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes mères</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Packs carte mère + CPU</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Alimentations</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Cartes Son</a>
+                                                </li>
+                                                <li role="presentation">
+                                                  <a role="menuitem" tabindex="-1" href="#">Autres</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <a class="search-button" href="#" ></a>
+
+                                </div>
+                            </form>
+                        </div><!-- /.search-area -->
+                        <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                    </div><!-- /.top-search-holder -->
+
+
+
+                    </div><!-- /.top-cart-row -->
+                </div><!-- /.container -->
+            </header>
+
+
+            <div class="animate-dropdown"><!-- ========================================= BREADCRUMB ========================================= -->
+						<div id="top-mega-nav">
+								<div class="container">
+										<nav>
+												<ul class="inline">
+														<li class="dropdown le-dropdown">
+																<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+																		<i class="fa fa-list"></i> Trier par catégorie
+																</a>
+
+																<ul class="dropdown-menu">
+																	<li><a href="#">Boites &amp; Accessoires</a></li>
+																	<li><a href="#">Processeurs</a></li>
+																	<li><a href="#">Ventilateurs</a></li>
+																	<li><a href="#">Cartes Graphiques</a></li>
+																	<li><a href="#">Memoire (RAM)</a></li>
+																	<li><a href="#">Cartes mères</a></li>
+																	<li><a href="#">Packs carte mère + CPU</a></li>
+																	<li><a href="#">Alimentations</a></li>
+																	<li><a href="#">Cartes Son</a></li>
+																	<li><a href="#">Autres</a></li>
+																</ul>
+														</li>
+
+														<li class="breadcrumb-nav-holder">
+																<ul>
+																		<li class="dropdown breadcrumb-item">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Fil d'ariane Bootstrap </a>
+																				<ul class="dropdown-menu">
+																						<li>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																						</li>
+																				</ul>
+																		</li><!-- /.breadcrumb-item -->
+
+																		<li class="dropdown breadcrumb-item">
+																				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Fil d'ariane Bootstrap </a>
+																				<ul class="dropdown-menu">
+																						<li>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																								<a href="#">sous-catégorie</a>
+																						</li>
+																				</ul>
+																		</li><!-- /.breadcrumb-item -->
+
+																		<li class="breadcrumb-item">
+																				<a href="#">Fil d'ariane Bootstrap</a>
+																		</li><!-- /.breadcrumb-item -->
+
+																		<li class="breadcrumb-item current">
+																				<a href="#">Produits</a>
+																		</li><!-- /.breadcrumb-item -->
+																</ul>
+														</li><!-- /.breadcrumb-nav-holder -->
+
+												</ul><!-- /.inline -->
+										</nav>
+
+								</div><!-- /.container -->
+						</div><!-- /#top-mega-nav -->
+						<!-- ========================================= BREADCRUMB : END ========================================= -->
+            </div>
+
+            <div id="single-product">
+                <div class="container">
+
+                    <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
+                        <div class="product-item-holder size-big single-product-gallery small-gallery">
+
+                            <div id="owl-single-product" class="owl-carousel">
+                                <div class="single-product-gallery-item" id="slide1">
+                                    <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
+                                        <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
+                                    </a>
+                                </div><!-- /.single-product-gallery-item -->
+
+                                <div class="single-product-gallery-item" id="slide2">
+                                    <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
+                                        <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
+                                    </a>
+                                </div><!-- /.single-product-gallery-item -->
+
+                                <div class="single-product-gallery-item" id="slide3">
+                                    <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
+                                        <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
+                                    </a>
+                                </div><!-- /.single-product-gallery-item -->
+                            </div><!-- /.single-product-slider -->
+
+
+                            <div class="single-product-gallery-thumbs gallery-thumbs">
+
+                                <div id="owl-single-product-thumbnails" class="owl-carousel">
+                                    <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="0" href="#slide1">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="0" href="#slide1">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="0" href="#slide1">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+
+                                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
+                                        <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                    </a>
+                                </div><!-- /#owl-single-product-thumbnails -->
+
+                                <div class="nav-holder left hidden-xs">
+                                    <a class="prev-btn slider-prev" data-target="#owl-single-product-thumbnails" href="#prev"></a>
+                                </div><!-- /.nav-holder -->
+
+                                <div class="nav-holder right hidden-xs">
+                                    <a class="next-btn slider-next" data-target="#owl-single-product-thumbnails" href="#next"></a>
+                                </div><!-- /.nav-holder -->
+
+                            </div><!-- /.gallery-thumbs -->
+
+                        </div><!-- /.single-product-gallery -->
+                    </div><!-- /.gallery-holder -->
+                    <div class="no-margin col-xs-12 col-sm-7 body-holder">
+                        <div class="body">
+                            <div class="star-holder inline"><div class="star" data-score="4"></div></div>
+
+                            <div class="title"><a href="#">Produit</a></div>
+                            <div class="brand">Marque</div>
+
+                            <div class="social-row">
+                                <span class="st_facebook_hcount"></span>
+                                <span class="st_twitter_hcount"></span>
+                                <span class="st_pinterest_hcount"></span>
+                            </div>
+
+
+                            <div class="excerpt">
+                                <p>Résumé de la description</p>
+                            </div>
+
+                            <div class="prices">
+                                <div class="price-current">Prix</div>
+                            </div>
+
+                            <div class="qnt-holder">
+                                <a class="le-button huge">Voir</a>
+                            </div><!-- /.qnt-holder -->
+                        </div><!-- /.body -->
+
+                    </div><!-- /.body-holder -->
+                </div><!-- /.container -->
+            </div><!-- /.single-product -->
+
+            <!-- ========================================= SINGLE PRODUCT TAB ========================================= -->
+            <section id="single-product-tab">
+                <div class="container">
+                    <div class="tab-holder">
+
+                        <ul class="nav nav-tabs simple" >
+                            <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+                            <li><a href="#additional-info" data-toggle="tab">Informations supplémentaires</a></li>
+                            <li><a href="#reviews" data-toggle="tab">Avis (3)</a></li>
+                        </ul><!-- /.nav-tabs -->
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet porttitor eros. Praesent quis diam placerat, accumsan velit interdum, accumsan orci. Nunc libero sem, elementum in semper in, sollicitudin vitae dolor. Etiam sed tempus nisl. Integer vel diam nulla. Suspendisse et aliquam est. Nulla molestie ante et tortor sollicitudin, at elementum odio lobortis. Pellentesque neque enim, feugiat in elit sed, pharetra tempus metus. Pellentesque non lorem nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                                <p>Sed consequat orci vel rutrum blandit. Nam non leo vel risus cursus porta quis non nulla. Vestibulum vitae pellentesque nunc. In hac habitasse platea dictumst. Cras egestas, turpis a malesuada mollis, magna tortor scelerisque urna, in pellentesque diam tellus sit amet velit. Donec vel rhoncus nisi, eget placerat elit. Phasellus dignissim nisl vel lectus vehicula, eget vehicula nisl egestas. Duis pretium sed risus dapibus egestas. Nam lectus felis, sodales sit amet turpis se.</p>
+
+                                <div class="meta-row">
+                                    <div class="inline">
+                                        <label>categories:</label>
+                                        <span><a href="#">Catégorie</a>,</span>
+                                        <span><a href="#">Catégorie</a></span>
+                                    </div><!-- /.inline -->
+
+                                    <span class="seperator">/</span>
+
+                                    <div class="inline">
+                                        <label>tag:</label>
+                                        <span><a href="#">Tag</a>,</span>
+                                        <span><a href="#">Tag</a>,</span>
+                                        <span><a href="#">Tag</a></span>
+                                    </div><!-- /.inline -->
+                                </div><!-- /.meta-row -->
+                            </div><!-- /.tab-pane #description -->
+
+                            <div class="tab-pane" id="additional-info">
+                                <ul class="tabled-data">
+                                    <li>
+                                        <label>Poids</label>
+                                        <div class="value">7.25 kg</div>
+                                    </li>
+                                    <li>
+                                        <label>Dimensions</label>
+                                        <div class="value">90x60x90 cm</div>
+                                    </li>
+                                    <li>
+                                        <label>Taille</label>
+                                        <div class="value">Très grande</div>
+                                    </li>
+                                    <li>
+                                        <label>Couleur</label>
+                                        <div class="value">Blanc</div>
+                                    </li>
+                                    <li>
+                                        <label>Garantie</label>
+                                        <div class="value">5 ans</div>
+                                    </li>
+                                </ul><!-- /.tabled-data -->
+
+																<div class="meta-row">
+                                    <div class="inline">
+                                        <label>categories:</label>
+                                        <span><a href="#">Catégorie</a>,</span>
+                                        <span><a href="#">Catégorie</a></span>
+                                    </div><!-- /.inline -->
+
+                                    <span class="seperator">/</span>
+
+                                    <div class="inline">
+                                        <label>tag:</label>
+                                        <span><a href="#">Tag</a>,</span>
+                                        <span><a href="#">Tag</a>,</span>
+                                        <span><a href="#">Tag</a></span>
+                                    </div><!-- /.inline -->
+                                </div><!-- /.meta-row -->
+                            </div><!-- /.tab-pane #additional-info -->
+
+
+                            <div class="tab-pane" id="reviews">
+                                <div class="comments">
+                                    <div class="comment-item">
+                                        <div class="row no-margin">
+                                            <div class="col-lg-1 col-xs-12 col-sm-2 no-margin">
+                                                <div class="avatar">
+                                                    <img alt="avatar" src="assets/images/default-avatar.jpg">
+                                                </div><!-- /.avatar -->
+                                            </div><!-- /.col -->
+
+                                            <div class="col-xs-12 col-lg-11 col-sm-10 no-margin">
+                                                <div class="comment-body">
+                                                    <div class="meta-info">
+                                                        <div class="author inline">
+                                                            <a href="#" class="bold">John Smith</a>
+                                                        </div>
+                                                        <div class="star-holder inline">
+                                                            <div class="star" data-score="4"></div>
+                                                        </div>
+                                                        <div class="date inline pull-right">
+                                                            12.07.2013
+                                                        </div>
+                                                    </div><!-- /.meta-info -->
+                                                    <p class="comment-text">
+                                                        Integer id purus ultricies nunc tincidunt congue vitae nec felis. Vivamus sit amet nisl convallis, faucibus risus in, suscipit sapien. Vestibulum egestas interdum tellus id venenatis.
+                                                    </p><!-- /.comment-text -->
+                                                </div><!-- /.comment-body -->
+
+                                            </div><!-- /.col -->
+
+                                        </div><!-- /.row -->
+                                    </div><!-- /.comment-item -->
+
+                                    <div class="comment-item">
+                                        <div class="row no-margin">
+                                            <div class="col-lg-1 col-xs-12 col-sm-2 no-margin">
+                                                <div class="avatar">
+                                                    <img alt="avatar" src="assets/images/default-avatar.jpg">
+                                                </div><!-- /.avatar -->
+                                            </div><!-- /.col -->
+
+                                            <div class="col-xs-12 col-lg-11 col-sm-10 no-margin">
+                                                <div class="comment-body">
+                                                    <div class="meta-info">
+                                                        <div class="author inline">
+                                                            <a href="#" class="bold">Jane Smith</a>
+                                                        </div>
+                                                        <div class="star-holder inline">
+                                                            <div class="star" data-score="5"></div>
+                                                        </div>
+                                                        <div class="date inline pull-right">
+                                                            12.07.2013
+                                                        </div>
+                                                    </div><!-- /.meta-info -->
+                                                    <p class="comment-text">
+                                                        Integer id purus ultricies nunc tincidunt congue vitae nec felis. Vivamus sit amet nisl convallis, faucibus risus in, suscipit sapien. Vestibulum egestas interdum tellus id venenatis.
+                                                    </p><!-- /.comment-text -->
+                                                </div><!-- /.comment-body -->
+
+                                            </div><!-- /.col -->
+
+                                        </div><!-- /.row -->
+                                    </div><!-- /.comment-item -->
+
+                                    <div class="comment-item">
+                                        <div class="row no-margin">
+                                            <div class="col-lg-1 col-xs-12 col-sm-2 no-margin">
+                                                <div class="avatar">
+                                                    <img alt="avatar" src="assets/images/default-avatar.jpg">
+                                                </div><!-- /.avatar -->
+                                            </div><!-- /.col -->
+
+                                            <div class="col-xs-12 col-lg-11 col-sm-10 no-margin">
+                                                <div class="comment-body">
+                                                    <div class="meta-info">
+                                                        <div class="author inline">
+                                                            <a href="#" class="bold">John Doe</a>
+                                                        </div>
+                                                        <div class="star-holder inline">
+                                                            <div class="star" data-score="3"></div>
+                                                        </div>
+                                                        <div class="date inline pull-right">
+                                                            12.07.2013
+                                                        </div>
+                                                    </div><!-- /.meta-info -->
+                                                    <p class="comment-text">
+                                                        Integer id purus ultricies nunc tincidunt congue vitae nec felis. Vivamus sit amet nisl convallis, faucibus risus in, suscipit sapien. Vestibulum egestas interdum tellus id venenatis.
+                                                    </p><!-- /.comment-text -->
+                                                </div><!-- /.comment-body -->
+
+                                            </div><!-- /.col -->
+
+                                        </div><!-- /.row -->
+                                    </div><!-- /.comment-item -->
+                                </div><!-- /.comments -->
+
+                                <div class="add-review row">
+                                    <div class="col-sm-8 col-xs-12">
+                                        <div class="new-review-form">
+                                            <h2>Ajouter un avis</h2>
+                                            <form id="contact-form" class="contact-form" method="post" >
+                                                <div class="row field-row">
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <label>Nom</label>
+                                                        <input class="le-input" >
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <label>Email</label>
+                                                        <input class="le-input" >
+                                                    </div>
+                                                </div><!-- /.field-row -->
+
+                                                <div class="field-row star-row">
+                                                    <label>Votre note</label>
+                                                    <div class="star-holder">
+                                                        <div class="star big" data-score="0"></div>
+                                                    </div>
+                                                </div><!-- /.field-row -->
+
+                                                <div class="field-row">
+                                                    <label>Votre avis</label>
+                                                    <textarea rows="8" class="le-input"></textarea>
+                                                </div><!-- /.field-row -->
+
+                                                <div class="buttons-holder">
+                                                    <button type="submit" class="le-button huge">Envoyer</button>
+                                                </div><!-- /.buttons-holder -->
+                                            </form><!-- /.contact-form -->
+                                        </div><!-- /.new-review-form -->
+                                    </div><!-- /.col -->
+                                </div><!-- /.add-review -->
+
+                            </div><!-- /.tab-pane #reviews -->
+                        </div><!-- /.tab-content -->
+
+                    </div><!-- /.tab-holder -->
+                </div><!-- /.container -->
+            </section><!-- /#single-product-tab -->
+            <!-- ========================================= SINGLE PRODUCT TAB : END ========================================= -->
+
+
+						<!-- ============================================================= FOOTER ============================================================= -->
+            <footer id="footer" class="color-bg">
+                <div class="link-list-row">
+                    <div class="container no-padding">
+                        <div class="col-xs-12 col-md-4 ">
+                            <!-- ============================================================= CONTACT INFO ============================================================= -->
+                            <div class="contact-info">
+                                <div class="footer-logo">
+                                    <img src="assets/images/HardWhere_logo.png" alt="Logo">
+                                </div><!-- /.footer-logo -->
+
+                                <div class="social-icons">
+                                    <h3>Gardez le contact</h3>
+                                    <ul>
+                                        <li><a href="http://facebook.com/transvelo" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-pinterest"></a></li>
+                                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                                        <li><a href="#" class="fa fa-stumbleupon"></a></li>
+                                        <li><a href="#" class="fa fa-dribbble"></a></li>
+                                        <li><a href="#" class="fa fa-vk"></a></li>
+                                    </ul>
+                                </div><!-- /.social-icons -->
+
+                            </div>
+                            <!-- ============================================================= CONTACT INFO : END ============================================================= -->
+                        </div>
+
+                        <div class="col-xs-12 col-md-8 no-margin">
+                            <!-- ============================================================= LINKS FOOTER ============================================================= -->
+                            <div class="link-widget">
+                                <div class="widget">
+                                    <h3>Navigation rapide</h3>
+                                    <ul>
+                                      <li><a href="#">Boites &amp; Accessoires</a></li>
+                                      <li><a href="#">Processeurs</a></li>
+                                      <li><a href="#">Ventilateurs</a></li>
+                                      <li><a href="#">Cartes Graphiques</a></li>
+                                      <li><a href="#">Memoire (RAM)</a></li>
+                                      <li><a href="#">Cartes mères</a></li>
+                                      <li><a href="#">Packs carte mère + CPU</a></li>
+                                      <li><a href="#">Alimentations</a></li>
+                                      <li><a href="#">Cartes Son</a></li>
+                                      <li><a href="#">Autres</a></li>
+                                    </ul>
+                                </div><!-- /.widget -->
+                            </div><!-- /.link-widget -->
+
+                            <div class="link-widget">
+                                <div class="widget">
+                                    <h3>Information</h3>
+                                    <ul>
+                                        <li><a href="category-grid.html">A propos</a></li>
+                                        <li><a href="category-grid.html">Nous contacter</a></li>
+
+                                    </ul>
+                                </div><!-- /.widget -->
+                            </div><!-- /.link-widget -->
+                            <!-- ============================================================= LINKS FOOTER : END ============================================================= -->
+                        </div>
+                    </div><!-- /.container -->
+                </div><!-- /.link-list-row -->
+
+                <div class="copyright-bar">
+                    <div class="container">
+                        <div class="col-xs-12 col-sm-6 no-margin">
+                            <div class="copyright">
+                                &copy; <a href="index.html">HardWhere</a> - all rights reserved
+                            </div><!-- /.copyright -->
+                        </div>
+                    </div><!-- /.container -->
+                </div><!-- /.copyright-bar -->
+            </footer><!-- /#footer -->
+            <!-- ============================================================= FOOTER : END ============================================================= -->
+        </div><!-- /.wrapper -->
+
+        <!-- JavaScripts placed at the end of the document so the pages load faster -->
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+        <script
+			  src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"
+			  integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="
+			  crossorigin="anonymous"></script>
+        <script src="switchstylesheet/switchstylesheet.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/gmap3.min.js"></script>
+        <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/css_browser_selector.min.js"></script>
+        <script src="assets/js/echo.min.js"></script>
+        <script src="assets/js/jquery.easing-1.3.min.js"></script>
+        <script src="assets/js/bootstrap-slider.min.js"></script>
+        <script src="assets/js/jquery.raty.min.js"></script>
+        <script src="assets/js/jquery.prettyPhoto.min.js"></script>
+        <script src="assets/js/jquery.customSelect.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/buttons.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

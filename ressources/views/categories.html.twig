@@ -13,8 +13,8 @@
                         <nav>
                             <ul class="inline">
                                 <li class="dropdown le-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-list"></i> Trier par catégorie
+                                    <a href="#" class="dropdown-toggle">
+                                        <i class="fa fa-list"></i> Trier par Catégorie
                                     </a>
 
 
@@ -82,12 +82,8 @@
                                     <div class="price-range-holder">
 
                                         <input type="text" class="price-slider" value="" >
-
-                                        <span class="min-max">
-                                            Prix : €x - €xxxx
-                                        </span>
                                         <span class="filter-button">
-                                            <a href="#">Filtrer</a>
+                                            <a id="filtrer" href="#">Filtrer</a>
                                         </span>
                                     </div>
                                 </div><!-- /.price-filter -->
@@ -105,22 +101,6 @@
                             <div class="grid-list-products">
                                 <h2 class="section-title">Produits</h2>
 
-                                <div class="control-bar">
-                                    <div id="item-count" class="le-select">
-                                        <select>
-                                            <option value="1">24 par page</option>
-																						<option value="3">32 par page</option>
-                                            <option value="2">48 par page</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="grid-list-buttons">
-                                        <ul>
-                                            <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Mozaïque</a></li>
-                                            <li class="grid-list-button-item "><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> Liste</a></li>
-                                        </ul>
-                                    </div>
-                                </div><!-- /.control-bar -->
 
                                 <div class="tab-content">
                                     <div id="grid-view" class="products-grid fade tab-pane in active">
@@ -141,11 +121,15 @@
                                                             <div class="brand">{{ produit.constructeur }}</div>
                                                         </div>
                                                         <div class="prices">
-                                                            <div class="price-current pull-right">{{ produit.prix }}</div>
+                                                            <div class="price-current pull-right">{{ produit.prix }} EUR</div>
                                                         </div>
                                                         <div class="hover-area">
                                                             <div class="add-cart-button">
-                                                                <a href="#" class="le-button">Voir</a>
+
+                                                                <a href="{{ url('index_article' , {
+                                                                    productTypeName : produit.productTypeName | lower,
+                                                                    slugarticle : produit.slug ,
+                                                                    ean : produit.ean }) }}" class="le-button">Voir</a>
                                                             </div>
                                                         </div>
                                                     </div><!-- /.product-item -->
@@ -185,6 +169,9 @@
             </section><!-- /#category-grid -->
 
 
+            <input id="routeURL" type="hidden" value="{{ url('index_index') }}">
+
+
 {% endblock %}
 
 {% block javascripts %}
@@ -209,6 +196,7 @@
                       //  console.log(data);
                         console.log(data)
                         let produits = $('<div class="resultat">');
+                        let routeURL = $('#routeURL').val();
 
                         for(i=0 ; i < data.length ; i++) {
 
@@ -229,11 +217,13 @@
                                           <div class="brand">${data[i].constructeur}</div>
                                       </div>
                                       <div class="prices">
-                                          <div class="price-current pull-right">${data[i].prix}</div>
+                                          <div class="price-current pull-right">${data[i].prix} EUR</div>
                                       </div>
                                       <div class="hover-area">
                                           <div class="add-cart-button">
-                                              <a href="#" class="le-button">Voir</a>
+
+                                              <a href="${routeURL}${data[i].productTypeName.toLowerCase()}/${data[i].slug}_${data[i].ean}.html" class="le-button">Voir</a>
+
                                           </div>
                                       </div>
                                   </div>
@@ -277,11 +267,13 @@
                                         <div class="brand">${data[i].constructeur}</div>
                                     </div>
                                     <div class="prices">
-                                        <div class="price-current pull-right">${data[i].prix}</div>
+                                        <div class="price-current pull-right">${data[i].prix} EUR</div>
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="#" class="le-button">Voir</a>
+
+                                            <a href="${routeURL}${data[i].productTypeName.toLowerCase()}/${data[i].slug}_${data[i].ean}.html" class="le-button">Voir</a>
+
                                         </div>
                                     </div>
                                 </div>
@@ -292,6 +284,59 @@
                       $('.resultat').replaceWith(produits);
 
                   });
+              });
+
+              $('#filtrer').click(() => {
+
+                  let prix = $('.tooltip-inner').html();
+                  let constructeur = $('#construct-select').val();
+                  let productTypeName = $('#categorie-select').val();
+
+                  console.log(prix)
+                  console.log(constructeur)
+                  console.log(productTypeName)
+
+                  $.ajax({
+                        url  : "{{ path('prix_ajax') }}",
+                        type : "POST",
+                        data : {
+                            constructeur     : constructeur,
+                            productTypeName  : productTypeName,
+                            prix             : prix
+                        }
+                    }).done(function(data) {
+                        console.log(data);
+
+                        let produits = $('<div class="resultat">');
+
+                        for(i=0 ; i < data.length ; i++) {
+                            produits.append(`
+                              <div class="col-xs-12 col-sm-4 no-margin product-item-holder hover">
+                                  <div class="product-item">
+                                      <div class="image">
+                                          <img alt="${data[i].titre}" src="${data[i].urlImage}" />
+                                      </div>
+                                      <div class="body">
+                                          <div class="title">
+                                              <a href="#">${data[i].titre}</a>
+                                          </div>
+                                          <div class="brand">${data[i].constructeur}</div>
+                                      </div>
+                                      <div class="prices">
+                                          <div class="price-current pull-right">${data[i].prix} EUR</div>
+                                      </div>
+                                      <div class="hover-area">
+                                          <div class="add-cart-button">
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            `);
+                        }
+
+                        $('.resultat').replaceWith(produits);
+
+                    });
               });
     });
 </script>
