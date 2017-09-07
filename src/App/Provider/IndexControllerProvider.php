@@ -32,6 +32,14 @@ class IndexControllerProvider implements ControllerProviderInterface {
                 // # En option je peux donner un nom à la route, qui servira plus tard
                 // # pour la créations de lien : "controller_action"
                 ->bind('index_categories');
+                
+            # Page Contact
+            $controllers
+                // # On associe une Route à un Controller et une Action
+                ->get('/contact', 'App\Controller\IndexController::contactAction')
+                // # En option je peux donner un nom à la route, qui servira plus tard
+                // # pour la créations de lien : "controller_action"
+                ->bind('index_contact');
 
             $controllers
                 ->post('/productTypeName', 'App\Controller\IndexController::productTypeNameAjax')
