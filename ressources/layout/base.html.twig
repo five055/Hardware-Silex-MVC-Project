@@ -73,18 +73,7 @@
                     </div><!-- /.col -->
 
                     <div class="col-xs-12 col-sm-6 no-margin">
-                      {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    		<h3 class="text-center">Bonjour {{ app.user.PRENOMAUTEUR }}</h3>
-                    		<ul class="list-group">
-                    			<li class="list-group-item">
-                    				<a href="{{ url('technews_deconnexion') }}">Déconnexion</a>
-                    			</li>
-                    		</ul>
-
-                    	{% endif %}
-
                         <ul class="right">
-                            <li><a href="{{ url('index_inscription') }}">Inscription</a></li>
                             <li><a href="{{ url('index_connexion') }}">Connexion</a></li>
                         </ul>
                     </div><!-- /.col -->
