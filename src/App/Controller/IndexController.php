@@ -70,56 +70,51 @@ class IndexController
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function connexionAction(Application $app, Request $request) {
-    return $app['twig']->render('connexion.html.twig',[
-        'error'         => $app['security.last_error']($request),
-        'last_username' => $app['session']->get('_security.last_username')
-    ]);
-}
+/**
+   * Affichage de la Page Connexion
+   * @return Symfony\Component\HttpFoundation\Response;
+   */
+  public function connexionAction(Application $app, Request $request) {
+      return $app['twig']->render('connexion.html.twig',[
+          'error'         => $app['security.last_error']($request),
+          'last_username' => $app['session']->get('_security.last_username')
+      ]);
+  }
 
-   /**
-    * Affichage de la Page Inscription
-    * @return Symfony\Component\HttpFoundation\Response;
-    */
-   public function inscriptionAction(Application $app) {
-       return $app['twig']->render('connexion.html.twig');
-   }
+  /**
+   * Affichage de la Page Inscription
+   * @return Symfony\Component\HttpFoundation\Response;
+   */
+  public function inscriptionAction(Application $app) {
+      return $app['twig']->render('connexion.html.twig');
+  }
 
-   /**
-    * Traitement POST du Formulaire d'Inscription
-    * use Symfony\Component\HttpFoundation\Request;
-    */
-   public function inscriptionPost(Application $app, Request $request) {
+  /**
+   * Traitement POST du Formulaire d'Inscription
+   * use Symfony\Component\HttpFoundation\Request;
+   */
+  public function inscriptionPost(Application $app, Request $request) {
 
-       # Vérification et Sécurisation des données POST
-       # ...
+      # Vérification et Sécurisation des données POST
+      # ...
 
-       # Connexion à la Base de Données
-       $client = $app['idiorm.db']->for_table('clients')->create();
+      # Connexion à la Base de Données
+      $auteur = $app['idiorm.db']->for_table('auteur')->create();
 
-       # Affectation des valeurs
-       $client->MAILCLIENT        =   $request->get('MAILCLIENT');
-       $client->PASSCLIENT          =   $app['security.encoder.digest']->encodePassword($request->get('PASSCLIENT'), '');
+      # Affectation des valeurs
+      $auteur->PRENOMAUTEUR       =   $request->get('PRENOMAUTEUR');
+      $auteur->NOMAUTEUR          =   $request->get('NOMAUTEUR');
+      $auteur->EMAILAUTEUR        =   $request->get('EMAILAUTEUR');
+      $auteur->MDPAUTEUR          =   $app['security.encoder.digest']->encodePassword($request->get('MDPAUTEUR'), '');
 
-       # On persiste en BDD
-       $client->save();
+      # On persiste en BDD
+      $auteur->save();
 
-       # On envoie un email de confirmation ou de bienvenue
-       # On envoie une notification à l'administrateur
-       # ...
+      # On envoie un email de confirmation ou de bienvenue
+      # On envoie une notification à l'administrateur
+      # ...
 
-       # On redirige l'utilisateur sur la page de connexion
-       return $app->redirect('connexion?inscription=success');
-   }
-
-   /**
-    * Déconnexion d'un Utilisateur
-    */
-   public function deconnexionAction(Application $app) {
-       # On vide la session de l'utilisateur
-       $app['session']->clear();
-       # On le redirige sur l'url de notre choix
-       return $app->redirect( $app['url_generator']->generate('index_index') );
-   }
-
+      # On redirige l'utilisateur sur la page de connexion
+      return $app->redirect('connexion?inscription=success');
+  }
 }

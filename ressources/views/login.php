@@ -22,7 +22,7 @@
   // si erreur = 0
 if ($exist == 1) {
     // recuperation mdp
-    $rqClient = "SELECT idClient, nomClient, prenomClient, passClient FROM clients WHERE mailClient = :mailClient";
+    $rqClient = "SELECT idClient, passClient FROM clients WHERE mailClient = :mailClient";
     // preparation
     $stmtClient = $dbh->prepare($rqClient);
     // execution
@@ -33,15 +33,13 @@ if ($exist == 1) {
     if (password_verify($safe['passClient'], $clients['passClient'])) {
         // client trouvé
         $_SESSION['auth'] = 'ok';
-        $_SESSION['nom'] = $clients['nomClient'];
         $_SESSION['id'] = $clients['idClient'];
-        $_SESSION['prenom'] = $clients['prenomClient'];
         // sécurité
         session_regenerate_id();
 
 
         // message de Bienvenue et retour accueil
-        echo '<script>alert("Bienvenue ' . $clients['prenomClient'] . ' ' . $clients['nomClient'] .'");
+        echo '<script>alert("Bienvenue ' . $clients['mailClient']'");
             window.location.href="../index.html.twig";
             </script>';
     } else {

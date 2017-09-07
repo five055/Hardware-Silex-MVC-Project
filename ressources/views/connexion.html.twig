@@ -5,76 +5,39 @@
 
 {# Block de Contenu défini dans base.html.twig #}
 {% block contenu %}
+    <div class="row">
+        <div class="col-xs-6 col-xs-push-3">
+            <h2 class="text-center">Inscription d'un Membre</h2 >
+            <form action="{{ path('index_inscription') }}" class="form-horizontal" method="post">
 
+                <!-- Prénom et Nom -->
+                <div class="form-group">
+                    <div class="col-xs-6">
+                        <input name="PRENOMAUTEUR" required class="form-control"
+                            type="text" placeholder="Saisissez votre Prénom">
+                    </div>
+                    <div class="col-xs-6">
+                        <input name="NOMAUTEUR" required class="form-control"
+                            type="text" placeholder="Saisissez votre Nom">
+                    </div>
+                </div>
 
-            <!-- ========================================= MAIN ========================================= -->
-            <main id="authentication" class="inner-bottom-md">
-                <div class="container">
-                    <div class="row">
+                <!-- Email et Mot de Passe -->
+                <div class="form-group">
+                    <div class="col-xs-6">
+                        <input name="EMAILAUTEUR" required class="form-control"
+                            type="email" placeholder="Saisissez votre Email">
+                    </div>
+                    <div class="col-xs-6">
+                        <input name="MDPAUTEUR" required class="form-control"
+                            type="password" placeholder="*********">
+                    </div>
+                </div>
 
-                        <div class="col-md-6">
-                            <section class="section sign-in inner-right-xs">
-                                <h2 class="bordered">Se connecter</h2>
-                                <p>Identifiez-vous</p>
+                <input type="submit" class="btn btn-block le-button huge" value="M'inscrire">
 
-                                <div class="social-auth-buttons">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button class="btn-block btn-lg btn btn-facebook"><i class="fa fa-facebook"></i> Se connecter avec Facebook</button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn-block btn-lg btn btn-twitter"><i class="fa fa-twitter"></i> Se connecter avec Twitter</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <form role="form" class="login-form cf-style-1" action="login.php" method="post">
-                                    <div class="field-row">
-                                        <label>Email</label>
-                                        <input type="email" class="le-input">
-                                    </div><!-- /.field-row -->
+            </form>
+        </div>
+    </div>
 
-                                    <div class="field-row">
-                                        <label>Mot de passe</label>
-                                        <input type="password" class="le-input">
-                                    </div><!-- /.field-row -->
-
-                                    <div class="field-row clearfix">
-                                        <span class="pull-left">
-                                            <label class="content-color"><input type="checkbox" class="le-checbox auto-width inline"> <span class="bold">Se souvenir de moi</span></label>
-                                        </span>
-                                        <span class="pull-right">
-                                            <a href="#" class="content-color bold">Mot de passe oublié ?</a>
-                                        </span>
-                                    </div>
-
-                                    <div class="buttons-holder">
-                                        <button type="submit" class="le-button huge">Connexion</button>
-                                    </div><!-- /.buttons-holder -->
-                                </form><!-- /.cf-style-1 -->
-
-                            </section><!-- /.sign-in -->
-                        </div><!-- /.col -->
-
-                        <div class="col-md-6">
-                            <section class="section register inner-left-xs">
-                                <h2 class="bordered">Créer un compte</h2>
-
-                                <form role="form" class="register-form cf-style-1" method="post">
-                                    <div class="field-row">
-                                        <label>Email</label>
-                                        <input type="email" class="le-input" name="MAILCLIENT">
-                                    </div><!-- /.field-row -->
-
-                                    <div class="buttons-holder">
-                                        <button type="submit" class="le-button huge">S'enregistrer</button>
-                                    </div><!-- /.buttons-holder -->
-                                </form>
-
-                            </section><!-- /.register -->
-
-                        </div><!-- /.col -->
-
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </main><!-- /.authentication -->
             {% endblock %}
