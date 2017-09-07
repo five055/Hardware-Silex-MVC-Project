@@ -117,4 +117,10 @@ class IndexController
       # On redirige l'utilisateur sur la page de connexion
       return $app->redirect('../public');
   }
+  public function deconnexionAction(Application $app) {
+      # On vide la session de l'utilisateur
+      $app['session']->clear();
+      # On le redirige sur l'url de notre choix
+      return $app->redirect( $app['url_generator']->generate('index_index') );
+  }
 }
