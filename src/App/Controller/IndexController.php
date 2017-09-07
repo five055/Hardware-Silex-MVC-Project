@@ -95,17 +95,14 @@ public function connexionAction(Application $app, Request $request) {
        # ...
 
        # Connexion à la Base de Données
-       $auteur = $app['idiorm.db']->for_table('auteur')->create();
+       $client = $app['idiorm.db']->for_table('clients')->create();
 
        # Affectation des valeurs
-       $auteur->PRENOMAUTEUR       =   $request->get('PRENOMAUTEUR');
-       $auteur->NOMAUTEUR          =   $request->get('NOMAUTEUR');
-       $auteur->EMAILAUTEUR        =   $request->get('EMAILAUTEUR');
-       $auteur->MDPAUTEUR          =   $app['security.encoder.digest']->encodePassword($request->get('MDPAUTEUR'), '');
-       $auteur->ROLESAUTEUR        =   $request->get('ROLEAUTEUR');
+       $client->MAILCLIENT        =   $request->get('MAILCLIENT');
+       $client->PASSCLIENT          =   $app['security.encoder.digest']->encodePassword($request->get('PASSCLIENT'), '');
 
        # On persiste en BDD
-       $auteur->save();
+       $client->save();
 
        # On envoie un email de confirmation ou de bienvenue
        # On envoie une notification à l'administrateur

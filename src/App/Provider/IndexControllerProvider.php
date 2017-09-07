@@ -53,6 +53,12 @@ class IndexControllerProvider implements ControllerProviderInterface {
                 ->method('GET|POST')
                 ->bind('index_inscription');
 
+# controllers pour l'inscription
+            $controllers
+                ->match('/inscription', 'App\Controller\IndexController::inscriptionPost')
+                ->method('GET|POST')
+                ->bind('index_inscription');
+
 
         # On retourne la liste des controllers (ControllerCollection)
         return $controllers;
