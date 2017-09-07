@@ -1,6 +1,6 @@
 
 <?php
-  // script login2.php
+/*  // script login2.php
   session_start();
   // connexion BDD
   require 'include/connexion.php';

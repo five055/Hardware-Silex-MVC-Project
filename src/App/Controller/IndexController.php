@@ -115,6 +115,6 @@ class IndexController
       # ...
 
       # On redirige l'utilisateur sur la page de connexion
-      return $app->redirect('connexion?inscription=success');
+      return $app->redirect('../public');
   }
 }
